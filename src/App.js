@@ -1,4 +1,4 @@
-import './App.css'
+import styles from './App.module.css'
 // import Card from './components/Card.jsx'
 import Cards from './components/Cards.jsx'
 import SearchBar from './components/SearchBar.jsx'
@@ -9,7 +9,7 @@ function App () {
     
     <div className='App' style={{ padding: '25px' }}>    
       <div>
-        <h1 className="titulo">Rick And Morty</h1>
+        <h1 className={styles.h1}>Rick And Morty</h1>
       </div>      
       <hr />
       <div>

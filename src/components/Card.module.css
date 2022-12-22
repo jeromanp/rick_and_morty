@@ -1,0 +1,71 @@
+.card{
+    position: relative;
+    border:4px solid rgb(17, 20, 211);
+    width: 22%;       
+    background-color: #000000a2;
+    margin: 10px;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    float:left;       
+}
+
+.name{
+    color:  rgb(10, 194, 10);
+    background-color: rgb(1, 8, 1);    
+    height: 8%;
+    width: 45%;
+    text-align: center;
+    letter-spacing: normal;
+    position:absolute;      
+    top: 77%;
+    left: 85px;
+    transform: translate(-50%, -50%);  
+
+}
+
+.name:hover {
+    background-color:  rgb(16, 255, 8);  
+    color: black;  
+  }
+
+.species{
+    position: absolute;
+    color: rgb(146, 224, 57);
+    right: 10%;
+    top:85%;
+}
+
+.gender{
+    position: absolute;
+    color:  rgb(146, 224, 57);
+    left: 10%;
+    top:85%;
+}
+
+img{
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 40px;    
+    border-radius: 10%;    
+}
+
+.cerrarCard{
+    color: white;
+    border: 2px solid white;
+    background-color: rgb(3, 3, 3);  
+    position: absolute;
+    top: 2%;
+    left: 90%;
+}
+
+.cerrarCard:hover {
+    color: black;
+    background-color:  rgb(255, 8, 8);    
+  }
+
+
+  
+
+

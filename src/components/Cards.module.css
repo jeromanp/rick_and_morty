@@ -3,9 +3,8 @@
     font-family: "LetraRickAndMorty"; 
     font-size: smaller;      
     letter-spacing: 3px; 
-
 }
-
+/* 
 .name{
     color:  rgb(10, 194, 10);
     background-color: rgb(1, 8, 1);    
@@ -39,11 +38,9 @@
     color:  rgb(146, 224, 57);
     left: 10%;
     top:85%;
-   
+} */
 
-}
-
-#buscarCard{
+/* .buscarCard{
     background-color: rgb(67, 196, 16);
     right: 20px;
     height: 30px;
@@ -51,8 +48,8 @@
     font-style:italic;
 }
 
-#inputCard{
+.inputCard{
     height: 30px;
     margin: 10px;
     width: 120px;
-}
+} */
