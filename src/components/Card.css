@@ -1,0 +1,34 @@
+.card{
+    position: relative;
+    border:4px solid rgb(17, 20, 211);
+    width: 22%;       
+    background-color: #000000a2;
+    margin: 10px;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    float:left;       
+}
+
+img{
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 40px;    
+    border-radius: 10%;    
+}
+
+#cerrarCard{
+    color: white;
+    border: 2px solid white;
+    background-color: rgb(3, 3, 3);  
+    position: absolute;
+    top: 2%;
+    left: 90%;
+}
+
+#cerrarCard:hover {
+    color: black;
+    background-color:  rgb(255, 8, 8);    
+  }
+

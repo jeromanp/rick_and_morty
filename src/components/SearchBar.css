@@ -1,0 +1,13 @@
+#buscarCard{
+    background-color: rgb(67, 196, 16);
+    right: 20px;
+    height: 30px;
+    font-size: medium;
+    font-style:italic;
+}
+
+#inputCard{
+    height: 30px;
+    margin: 10px;
+    width: 120px;
+}

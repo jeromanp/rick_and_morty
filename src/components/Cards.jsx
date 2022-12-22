@@ -1,10 +1,11 @@
 import Card from './Card';
+import "./Cards.css"
 
 export default function Cards(props) {
    //array de objetos con los personajes
    const { characters } = props;
    return (
-   <div>
+   <div className = "cards">
       {
          //destructuring del array characters
          characters.map(({name,species,gender,image}) => {
