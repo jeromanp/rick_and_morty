@@ -7,7 +7,7 @@ import characters from './data.js'
 function App () {
   return (
     
-    <div className='App' style={{ padding: '25px' }}>    
+    <div className={styles.App} style={{ padding: '25px' }}>    
       <div>
         <h1 className={styles.h1}>Rick And Morty</h1>
       </div>      
@@ -18,8 +18,7 @@ function App () {
         />        
         <hr />      
         <Cards characters={characters}/>
-      </div>
-      
+      </div>      
     </div>
   )
 }
