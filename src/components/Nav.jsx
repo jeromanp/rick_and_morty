@@ -1,10 +1,20 @@
-import "./Nav.css"
+import React from "react";
+import SearchBar from "./SearchBar";
+import styles from "./Nav.module.css";
 
 export default function Nav(props) {
    return (
-      <div className="nav">         
-         <input id="inputCard"type='search' placeholder="ID del personaje" />
-         <button id="buscarCard"  onClick={()=>{props.onSearch(5)}}>Agregar</button>
+      <div className={styles.nav}>  
+         <div >
+            <button className={styles.homeFiltrar}>Home</button>
+         </div>       
+         <div>
+            <button className={styles.homeFiltrar}>Filtrar</button>
+         </div>  
+         <div>
+            <SearchBar onSearch={props.onSearch}/>
+         </div>
+         
       </div>
    );
 }

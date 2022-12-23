@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 // import Card from './components/Card.jsx'
 import Cards from './components/Cards.jsx'
-import SearchBar from './components/SearchBar.jsx'
+import Nav from './components/Nav.jsx'
 import characters from './data.js'
 
 function App () {
@@ -13,7 +13,7 @@ function App () {
       </div>      
       <hr />
       <div>
-        <SearchBar
+        <Nav
           onSearch={(characterID) => window.alert(characterID)}          
         />        
         <hr />      

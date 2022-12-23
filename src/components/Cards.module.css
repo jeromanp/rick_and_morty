@@ -1,55 +1,10 @@
 .cards{   
+    border: 3px solid rgb(49, 141, 216);
     color: rgb(207, 190, 34);        
-    font-family: "LetraRickAndMorty"; 
+    /* font-family: "LetraRickAndMorty";  */
     font-size: smaller;      
     letter-spacing: 3px; 
+    display: flex;
+    border-radius: 20px;
+    padding: 6px;
 }
-/* 
-.name{
-    color:  rgb(10, 194, 10);
-    background-color: rgb(1, 8, 1);    
-    height: 8%;
-    width: 45%;
-    text-align: center;
-    letter-spacing: normal;
-    position:absolute;      
-    top: 77%;
-    left: 85px;
-    transform: translate(-50%, -50%);  
-
-}
-
-.name:hover {
-    background-color:  rgb(16, 255, 8);  
-    color: black;  
-  }
-
-.species{
-    position: absolute;
-    color: rgb(146, 224, 57);
-    right: 10%;
-    top:85%;
-    
-
-}
-
-.gender{
-    position: absolute;
-    color:  rgb(146, 224, 57);
-    left: 10%;
-    top:85%;
-} */
-
-/* .buscarCard{
-    background-color: rgb(67, 196, 16);
-    right: 20px;
-    height: 30px;
-    font-size: medium;
-    font-style:italic;
-}
-
-.inputCard{
-    height: 30px;
-    margin: 10px;
-    width: 120px;
-} */
