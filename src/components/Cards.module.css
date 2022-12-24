@@ -1,10 +1,8 @@
 .cards{   
-    border: 3px solid rgb(49, 141, 216);
-    color: rgb(207, 190, 34);        
-    /* font-family: "LetraRickAndMorty";  */
-    font-size: smaller;      
-    letter-spacing: 3px; 
-    display: flex;
+    border: 3px solid rgb(49, 141, 216);      
+    font-size: smaller;         
     border-radius: 20px;
     padding: 6px;
+    text-align: left;
+    display: flex;
 }

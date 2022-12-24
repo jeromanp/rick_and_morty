@@ -1,29 +1,32 @@
 .card{
-    position: relative;
-    border:4px solid rgb(17, 20, 211);
-    border-radius: 6px;
-    width: 25%;       
-    background-color: #18bd1871;
-    margin: 10px;
-    display:flex;
-    flex-direction:column-reverse;
-    align-items: center;
-    float:left;       
+  position: relative;
+  border: 4px solid rgb(15, 185, 9);
+  border-radius: 9px;  
+  width: 25%;
+  background-color: #18bd1842;
+  margin: 5px;
+  display: inline-block;
+  flex-direction: column;
+  align-items:flex-end;  
+  justify-content: space-between; 
 }
+
+
 
 .name{
     font-family: LetraRickAndMorty;
     color:  rgb(10, 194, 10);
-    background-color: rgb(1, 8, 1);    
-    height: 8%;
-    width: 45%;
-    text-align: center;
-    letter-spacing: normal;
-    position:absolute;      
-    top: 77%;
-    left: 85px;
-    transform: translate(-50%, -50%);  
-
+    background-color: rgb(1, 8, 1);  
+    font-size: 15vm;  
+    height: auto;
+    width: auto;    
+    letter-spacing:normal;   
+    position:absolute;     
+    text-align:justify; 
+    text-size-adjust: 15vm;    
+    top: 82%;
+    left: 40px;
+    transform: translate(-10%, -100%);  
 }
 
 .name:hover {
@@ -31,37 +34,46 @@
     color: black;  
   }
 
-.species{
-    font-family:sans-serif;
-    font-size: 20px;
+.species{   
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 10vm;
     position: absolute;
     color: rgb(216, 123, 18);
-    right: 10%;
-    top:85%;
+    width: auto;
+    height: auto;
+    text-align:justify; 
+    text-size-adjust: 15vm;
+    align-items: center;
+    right: 3%;
+    top:87%;
 }
 
 .gender{
-    font-family:sans-serif;
-    font-size: 20px;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 10vm;
     position: absolute;
     color:   rgb(216, 123, 18);
-    left: 10%;
-    top:85%;
+    width: auto;
+    height: auto;
+    text-align:justify; 
+    text-size-adjust: 15vm;
+    left: 3%;
+    top:87%;
 }
 
 img{
-    width: 95%;
-    height: auto;
-    padding: 20px;
-    margin: 40px;    
+    width:80%;
+    height: 80%;
+    padding: 25px;    
     border-radius: 10%;    
+    align-items: center;
+    display: flex;
 }
 
-.cerrarCard{
-    color: white;
-    border: 2px solid white;
-    background-color: rgb(3, 3, 3);  
+.cerrarCard{    
     position: absolute;
+    height: auto;
+    width: auto;
     top: 2%;
     left: 90%;
 }
@@ -69,9 +81,6 @@ img{
 .cerrarCard:hover {
     color: black;
     background-color:  rgb(255, 8, 8);    
-  }
-
-
-  
+  }  
 
 

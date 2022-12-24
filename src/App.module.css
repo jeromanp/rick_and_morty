@@ -20,8 +20,13 @@ body{
    font-family: "LetraRickAndMorty";   
    font-size:1.2cm;
    letter-spacing: 7px;   
-   margin-top: -1%; 
+   text-shadow: 2px 2px 4px rgb(222, 226, 220);
+   bottom: 0.8em;   
+   z-index: 50;
+  -webkit-text-stroke: 1px rgba(11, 40, 4, 0.5);
+   
 }
+
 
 
 
