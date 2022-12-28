@@ -7,25 +7,13 @@
    src: url("./components/Fuentes/get_schwifty.eot"), url("./components/Fuentes/get_schwifty.ttf");   
 }
 
-
 body{
    background-image:url("https://images.alphacoders.com/876/876589.jpg");  
    background-size: cover;
    background-position:center;    
 }
 
-.h1{
-   color: rgb(10, 194, 10);
-   text-align: center;  
-   font-family: "LetraRickAndMorty";   
-   font-size:1.2cm;
-   letter-spacing: 7px;   
-   text-shadow: 2px 2px 4px rgb(222, 226, 220);
-   bottom: 0.8em;   
-   z-index: 50;
-  -webkit-text-stroke: 1px rgba(11, 40, 4, 0.5);
-   
-}
+
 
 
 

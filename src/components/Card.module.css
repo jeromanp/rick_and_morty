@@ -17,15 +17,15 @@
     font-family: LetraRickAndMorty;
     color:  rgb(10, 194, 10);
     background-color: rgb(1, 8, 1);  
-    font-size: 15vm;  
+    font-size: large;      
     height: auto;
     width: auto;    
-    letter-spacing:normal;   
+    letter-spacing:2px;   
     position:absolute;     
     text-align:justify; 
     text-size-adjust: 15vm;    
-    top: 80%;
-    left: 40px;
+    top: 78%;
+    left: 42px;
     transform: translate(-10%, -100%);  
 }
 
@@ -63,12 +63,13 @@
 
 img{
     width:80%;
-    height: 80%;
-    padding: 25px;    
+    height: 90%;
+    padding:26px;    
     border-radius: 10%;    
     align-items: center;
     display: flex;
     padding-block-end: 50px;
+    
 }
 
 .cerrarCard{    

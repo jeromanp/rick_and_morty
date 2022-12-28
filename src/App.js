@@ -2,6 +2,10 @@ import styles from "./App.module.css";
 import { useState } from "react";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav.jsx";
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/Login.jsx";
+import About from "./components/About.jsx";
+import Detail from "./components/Detail.jsx";
 
 function App() {
   //3. se crea es estado characters
@@ -17,7 +21,7 @@ function App() {
           //para no repetir personajes
           let existe = characters.find((event) => event.id === data.id);
           if (existe) {
-            alert("Ese personaje ya existe");            
+            alert("Ese personaje ya existe");
           } else {
             setCharacters((oldChars) => [...oldChars, data]);
           }
@@ -26,9 +30,6 @@ function App() {
           window.alert("No hay personajes con ese ID");
         }
       });
-
-
-
   }
 
   //10. funcion para cerrar las cards y mandar un alert de que ID se elimino
@@ -42,15 +43,18 @@ function App() {
   return (
     <div className={styles.App}>
       <div>
-        <h1 className={styles.h1}>Rick And Morty</h1>
-      </div>     
-      <hr />
-      <div>
         {/* 2. renderiza Nav que incluye el SearchBar */}
         <Nav onSearch={onSearch} />
         <hr />
-        <Cards characters={characters} onClose={onClose} />        
       </div>
+
+      <Routes>
+        <Route path="/" element=<Login/> />
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
+        <Route path="/about" element=<About/> />   
+        <Route path="/detail/:detailId" element=<Detail/> />        
+
+      </Routes>
     </div>
   );
 }

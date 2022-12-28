@@ -1,6 +1,7 @@
 import Card from "./Card";
 import styles from "./Cards.module.css";
 
+
 export default function Cards(props) {
   //array de objetos con los personajes
   const { characters } = props;
@@ -14,6 +15,8 @@ export default function Cards(props) {
         characters.map(({ name, species, gender, image, id }) => {
           return (
             <Card
+              key={id}
+              id={id}
               name={name}
               species={species}
               gender={gender}
