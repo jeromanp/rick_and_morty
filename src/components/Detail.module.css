@@ -4,42 +4,80 @@
   display: flex;  
   margin-left: 80px;
   margin-top: 20px;
-  width: 40%;
-  height: 40%;  
-  border-radius: 80px;
+  width: 60%;
+  height: auto;  
+  border-radius: 40px;
   position: relative;
   overflow: auto;
 }
 
 .name {
   color: rgb(218, 205, 190);
-  text-shadow: 0px 0px 30px #1eca1b;
+  text-shadow: 0px 0px 20px #1eca1b;
   font-family: LetraRickAndMorty;
+  font-size: 40px;
   position: absolute;
   text-align:start;
   display: flex;
   width: auto;
-  padding-left: 50px;
-  transform: translate(70%, 0%);  
+  padding-left: 100px;
+  transform: translate(20%, 0%);  
 }
 
 .h3 {  
-  font-family: 'Comic Sans MS', cursive;
+  /* font-family: 'Comic Sans MS', cursive; */
+  font-family: LetraRickAndMorty;
   color:   rgb(158, 98, 30);  
+  text-shadow: 0px 0px 20px #10e90c;  
   width: auto; 
-  padding-left: 10px; 
+  /* padding-left: 0px;  */
   top: 10px;
   display: flex;
   flex-direction: row;
-  transform: translate(30%, 300%);    
+  transform: translate(10%, 300%);    
 }
 
 .img {
     width: 200px;
+    height: 200px;
     display: flex;
     padding-top: 100px;
     padding-left: 90px;
     vertical-align:middle;
     float: right;
+    transform: translate(0%, 0%);
    
 }
+
+.buttonBack {
+  font-family: LetraRickAndMorty;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5ad321;
+  background-image: linear-gradient(315deg, #0ed35a 0%, #246218 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  transition: 500ms;
+  color: #e6f6e8;
+  margin: 5px;
+  font-weight: bold;
+  font-size: large;
+  transform: translate(20%, 20%);
+}
+
+.buttonBack:hover {
+  background-position: right;
+  color: #080808;
+}
+
+.buttonBack :focus {
+  outline: none;
+}
+

@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function Detail() {
   const { detailId } = useParams();
   const [character, setCharacter] = useState({});
   console.log(detailId);
+
+  const navigate = useNavigate();
+  function backToHome() {
+    return navigate("/home");
+    // return history.push("/home")
+  }
 
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
@@ -26,6 +32,12 @@ export default function Detail() {
 
   return (
     <div className={styles.detail}>
+      <div>
+        <button className={styles.buttonBack} onClick={backToHome}>
+          Volver a Home
+        </button>
+      </div>
+      
       <>
         <h1 className={styles.name}>{character.name}</h1>
       </>
