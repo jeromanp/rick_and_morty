@@ -34,7 +34,7 @@ export default function Detail() {
     <div className={styles.detail}>
       <div>
         <button className={styles.buttonBack} onClick={backToHome}>
-          Volver a Home
+          Volver
         </button>
       </div>
       
