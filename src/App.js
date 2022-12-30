@@ -1,11 +1,11 @@
 import styles from "./App.module.css";
 import { useState } from "react";
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav.jsx";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/Nav/Nav.jsx";
 import { Routes, Route, useLocation } from "react-router-dom";
-import About from "./components/About.jsx";
-import Detail from "./components/Detail.jsx";
-import Form from "./components/Form";
+import About from "./components/About/About.jsx";
+import Detail from "./components/Detail/Detail.jsx";
+import Form from "./components/Form/Form";
 
 export default function App() {
   
