@@ -13,6 +13,26 @@ body{
    background-position:center;    
 }
 
+.h1{
+   color: rgb(18, 220, 18);
+   text-align: center;
+   font-family: "LetraRickAndMorty";
+   font-size: 1.2cm;
+   letter-spacing: 7px;
+   text-shadow: 2px 2px 4px rgb(231, 238, 228);
+   bottom: 0.8em;
+   z-index: 50;
+   -webkit-text-stroke: 1px rgba(11, 40, 4, 0.5);
+}
+
+.h3{
+   color: rgb(22, 206, 22);
+   text-align: center;
+   font-family: "LetraRickAndMorty";  
+   letter-spacing: 2px;
+   text-shadow: 2px 2px 4px rgba(203, 211, 199, 0.618);
+}
+
 
 
 
