@@ -1,0 +1,16 @@
+.container {
+  background-color: rgba(49, 199, 30, 0.612);
+  color: aliceblue;
+  text-align: justify;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  padding: auto;
+  width: 270px;
+  height: 70px;
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
