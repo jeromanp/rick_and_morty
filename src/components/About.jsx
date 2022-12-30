@@ -1,9 +1,22 @@
 import React from "react";
 import styles from "./About.module.css";
+import { useNavigate } from "react-router-dom";
 
 
 export default function About(){
+    const navigate=useNavigate();
+
+    function backtoHome(){
+        return navigate("/home")
+    }
+
     return (
+        <>
+        <div>
+        <button className={styles.buttonBack} onClick={backtoHome}>
+          Volver
+        </button>
+      </div>
         <div className={styles.about}>
             <h1 className={styles.titleAbout}>Acerca de la App</h1>
 
@@ -29,6 +42,7 @@ export default function About(){
             <p className={styles.p}>Gracias Henry por aparecerte en mi camino.</p>
         
         </div>
+        </>
     )
 
 }
