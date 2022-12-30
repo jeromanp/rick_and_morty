@@ -2,17 +2,15 @@ import styles from "./App.module.css";
 import { useState } from "react";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav.jsx";
-import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login.jsx";
+import { Routes, Route, useLocation } from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
+import Form from "./components/Form";
 
-function App() {
-  //3. se crea es estado characters
+export default function App() {
+  
   const [characters, setCharacters] = useState([]);
-
-  //9. copiar y pegar el fetch en onSearch
-  //9. adicional, se modifica la promesa para que no agregue IDs repetidos
+  
   function onSearch(id) {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
@@ -32,7 +30,7 @@ function App() {
       });
   }
 
-  //10. funcion para cerrar las cards y mandar un alert de que ID se elimino
+  
   function onClose(id) {
     setCharacters((dato) => {
       return dato.filter((event) => event.id !== id);
@@ -40,16 +38,45 @@ function App() {
     alert(`Se elimino el ID ${id}`);
   }
 
+  const location = useLocation();
+
+  if (location.pathname === "/") {
+    return (
+      <div>
+        <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>
+        <hr />
+        <h3 className={styles.h3}>Ingresa tu usuario y contraseña para acceder</h3>
+        <Form />
+      </div>
+    );
+  }
+
+  // if(location.pathname === "/home"){
+  //   return(
+  //     <div>
+  //       <Nav/>
+  //       <Cards characters={characters} onClose={onClose}/>
+        
+  //     </div>
+  //   )
+  // }
+
+  if(location.pathname === "/about"){
+    return(
+      <div>
+        {/* <Nav/> */}
+        <About/>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.App}>
-      <div>
-        {/* 2. renderiza Nav que incluye el SearchBar */}
-        <Nav onSearch={onSearch} />
-        <hr />
-      </div>
-
-      <Routes>
-        <Route path="/" element=<Login/> />
+      <div>        
+        <Nav onSearch={onSearch} />        
+      </div>      
+      <Routes>        
+        <Route path="/" element=<Form/> />
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
         <Route path="/about" element=<About/> />   
         <Route path="/detail/:detailId" element=<Detail/> />        
@@ -59,4 +86,4 @@ function App() {
   );
 }
 
-export default App;
+
