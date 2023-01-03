@@ -29,20 +29,20 @@
   font-family: LetraRickAndMorty;
   color:   rgb(65, 102, 221);  
   background-color: #080808;
-  background-size: auto;
+  border: solid #0c398d 2px;
+  background-size:contain;
   text-shadow: 0px 0px 20px #c5cee9;  
   letter-spacing: 2px;
   width: auto; 
   top: 10px;
   display: flex;
   flex-direction: row;
-  transform: translate(-10%, 300%);    
-  /* padding-left: 0px;  */
+  transform: translate(-10%, 300%);
 }
 
 .img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     display: flex;
     padding-top: 100px;
     padding-left: 90px;
@@ -69,7 +69,8 @@
   background-position: left;
   transition: 500ms;
   color: #e6f6e8;
-  margin: 5px;  
+  margin: 25px;  
+  margin-left: 180px;
   font-size: large;
   transform: translate(-250%, 30%);
 }
