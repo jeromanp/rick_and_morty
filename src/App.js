@@ -23,6 +23,12 @@ export default function App() {
     }
   };
 
+  const logout = () => {
+    setAccess(false);
+    navigate("/");
+    alert("Has salido de tu cuenta");
+  };
+
   useEffect(() => {
     !access && navigate("/");
     // eslint-disable-next-line
@@ -70,10 +76,10 @@ export default function App() {
       <div>
         {location.pathname === "/" ? (
           <>
-            <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>                     
+            <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>
           </>
         ) : (
-          <Nav onSearch={onSearch} />
+          <Nav onSearch={onSearch} logout={logout} />
         )}
       </div>
 

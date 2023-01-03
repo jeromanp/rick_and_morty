@@ -27,6 +27,12 @@ export default function Nav(props) {
           <button className={styles.buttonAbout}>About</button>
         </Link>
       </div>
+
+      <div>
+        <Link to= "/">
+          <button className={styles.buttonLogout} onClick={props.logout}>Logout</button>
+        </Link>
+      </div>
     </div>
   );
 }
