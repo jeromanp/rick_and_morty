@@ -1,5 +1,5 @@
 .about {
-  color: rgba(51, 194, 58, 0.836); 
+  color: rgba(119, 120, 218, 0.836); 
   padding: 20px;
   padding-left: 60px;
   padding-right: 60px;
@@ -8,7 +8,7 @@
 
 .titleAbout {
   text-align: center;
-  color: rgb(13, 175, 40);
+  color: rgb(17, 65, 224);
   font-family: LetraRickAndMorty;
   letter-spacing:8px;
   font-size: 50px;  
@@ -16,7 +16,7 @@
 }
 
 .h2 {
-  color: rgb(96, 196, 121);
+  color: rgb(96, 131, 196);
   font-family: georgia;
   font-size: 27px;
   text-shadow: 0px 0px 15px #a9daa8;  
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5ad321;
-  background-image: linear-gradient(315deg, #0ed35a 0%, #246218 74%);
+  background-color: #0e4ba7;
+  background-image: linear-gradient(315deg, #0c398d 0%, #484986 74%);
   background-size: 200% 100%;
   background-position: left;
   transition: 500ms;
