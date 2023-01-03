@@ -1,16 +1,36 @@
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
-import { useState } from "react";
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import { Routes, Route, useLocation } from "react-router-dom";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 export default function App() {
-  
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const username = "jeroman@gmail.com";
+  const password = "1password";
+
+  const login = (userData) => {
+    if (password === userData.password && username === userData.username) {
+      setAccess(true);
+      navigate("/home");
+      alert("Has accedido a la App");
+    } else {
+      alert("username y/o password incorrectos");
+    }
+  };
+
+  useEffect(() => {
+    !access && navigate("/");
+    // eslint-disable-next-line
+  }, [access]);
+
   const [characters, setCharacters] = useState([]);
-  
+  const location = useLocation();
+
   function onSearch(id) {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
@@ -30,7 +50,6 @@ export default function App() {
       });
   }
 
-  
   function onClose(id) {
     setCharacters((dato) => {
       return dato.filter((event) => event.id !== id);
@@ -38,52 +57,35 @@ export default function App() {
     alert(`Se elimino el ID ${id}`);
   }
 
-  const location = useLocation();
-
-  if (location.pathname === "/") {
+  if (location.pathname === "/about") {
     return (
-      <div>
-        <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>
-        <hr />
-        <h3 className={styles.h3}>Ingresa tu usuario y contraseña para acceder</h3>
-        <Form />
-      </div>
+      <>
+        <About />
+      </>
     );
-  }
-
-  // if(location.pathname === "/home"){
-  //   return(
-  //     <div>
-  //       <Nav/>
-  //       <Cards characters={characters} onClose={onClose}/>
-        
-  //     </div>
-  //   )
-  // }
-
-  if(location.pathname === "/about"){
-    return(
-      <div>
-        {/* <Nav/> */}
-        <About/>
-      </div>
-    )
   }
 
   return (
     <div className={styles.App}>
-      <div>        
-        <Nav onSearch={onSearch} />        
-      </div>      
-      <Routes>        
-        <Route path="/" element=<Form/> />
-        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
-        <Route path="/about" element=<About/> />   
-        <Route path="/detail/:detailId" element=<Detail/> />        
+      <div>
+        {location.pathname === "/" ? (
+          <>
+            <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>                     
+          </>
+        ) : (
+          <Nav onSearch={onSearch} />
+        )}
+      </div>
 
+      <Routes>
+        <Route path="/" element=<Form login={login} /> />
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element=<About /> />
+        <Route path="/detail/:detailId" element=<Detail /> />
       </Routes>
     </div>
   );
 }
-
-

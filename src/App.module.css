@@ -8,13 +8,13 @@
 }
 
 body{
-   background-image:url("https://images.alphacoders.com/876/876589.jpg");  
+   background-image:url("https://p4.wallpaperbetter.com/wallpaper/862/502/357/tv-show-rick-and-morty-cartoon-humor-wallpaper-preview.jpg");  
    background-size: cover;
-   background-position:center;    
+   background-position:top; 
 }
 
 .h1{
-   color: rgb(18, 220, 18);
+   color: rgb(12, 78, 219);
    text-align: center;
    font-family: "LetraRickAndMorty";
    font-size: 1.2cm;
@@ -26,7 +26,7 @@ body{
 }
 
 .h3{
-   color: rgb(22, 206, 22);
+   color: rgb(65, 10, 194);
    text-align: center;
    font-family: "LetraRickAndMorty";  
    letter-spacing: 2px;
