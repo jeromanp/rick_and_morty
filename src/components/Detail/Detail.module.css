@@ -14,8 +14,8 @@
 }
 
 .name {
-  color: rgb(226, 221, 216);
-  text-shadow: 0px 0px 20px #0e1fbd;
+  color: rgb(26, 10, 243);
+  text-shadow: 0px 0px 20px #e1e2ee;
   font-family: LetraRickAndMorty;
   font-size: 40px;
   position: absolute;
@@ -29,7 +29,8 @@
   font-family: LetraRickAndMorty;
   color:   rgb(65, 102, 221);  
   background-color: #080808;
-  text-shadow: 0px 0px 20px #5c70b3;  
+  background-size: auto;
+  text-shadow: 0px 0px 20px #c5cee9;  
   letter-spacing: 2px;
   width: auto; 
   top: 10px;
