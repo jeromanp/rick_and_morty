@@ -1,9 +1,9 @@
 .card{
   position: relative;
-  border: 4px solid rgb(15, 185, 9);
+  border: 4px solid rgb(18, 42, 175);
   border-radius: 9px;  
   width: 22%;
-  background-color: #18bd1842;
+  background-color: #0c2fce42;
   margin: 5px;
   display: inline-block;
   flex-direction: column;
@@ -15,7 +15,7 @@
 
 .name{
     font-family: LetraRickAndMorty;
-    color:  rgb(10, 194, 10);
+    color:  rgb(211, 211, 228);
     background-color: rgb(1, 8, 1);  
     font-size: large;      
     height: auto;
@@ -30,15 +30,15 @@
 }
 
 .name:hover {
-    background-color:  rgb(16, 255, 8);  
-    color: black;  
+    background-color: rgb(211, 211, 228);;  
+    color: rgb(1, 8, 1);  
   }
 
 .species{   
     font-family: 'Comic Sans MS', cursive;
     font-size: 10vm;
     position: absolute;
-    color: rgb(216, 123, 18);
+    color: rgb(233, 223, 212);
     width: auto;
     height: auto;
     text-align:justify; 
@@ -52,7 +52,7 @@
     font-family: 'Comic Sans MS', cursive;
     font-size: 10vm;
     position: absolute;
-    color:   rgb(216, 123, 18);
+    color:   rgb(233, 223, 212);
     width: auto;
     height: auto;
     text-align:justify; 
