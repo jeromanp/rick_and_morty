@@ -1,16 +1,48 @@
 .container {
-  background-color: rgba(49, 199, 30, 0.612);
+  background-color: rgba(174, 191, 216, 0.612);
   color: aliceblue;
-  text-align: justify;
-  display: inline-block;
+  /* font-family: LetraRickAndMorty; */
+  text-align: center;
+  display: flexbox;
+  border-radius: 40px;
   flex-direction: column;
   justify-content: center;
-  padding: auto;
-  width: 270px;
-  height: 70px;
-  /* margin: 0 auto; */
+  padding-top: 20px;
+  width: 250px;
+  height: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.h2{
+  color: rgb(12, 63, 204);
+  text-shadow: 2px 2px 4px rgb(219, 220, 230);
+}
+
+.h4{
+  color: rgb(28, 43, 182);
+}
+
+
+
+.buttonLogin{
+  color: rgb(225, 226, 241);
+  background-color: rgb(15, 12, 207);    
+  height: 40px;
+  width: 200px;
+  border-radius: 12px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.warning {
+  border: solid rgb(255, 0, 0) 1.5px;
+  border-radius: 0.2em;
+}
+
+.danger {
+  font-size: 10px;
+  color: rgb(255, 0, 0);
 }
