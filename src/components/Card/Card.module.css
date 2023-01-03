@@ -39,6 +39,8 @@
     font-size: 10vm;
     position: absolute;
     color: rgb(233, 223, 212);
+    background-color: rgba(0, 0, 0, 0.699);
+    background-size: auto;
     width: auto;
     height: auto;
     text-align:justify; 
@@ -53,6 +55,8 @@
     font-size: 10vm;
     position: absolute;
     color:   rgb(233, 223, 212);
+    background-color: rgba(0, 0, 0, 0.699);
+    background-size: auto;
     width: auto;
     height: auto;
     text-align:justify; 
