@@ -53,7 +53,7 @@ export default function Form(props) {
 
           <label></label>          
           <input
-            type="password"
+            type="text"
             name="password"
             placeholder="Password"
             value={userData.password}
