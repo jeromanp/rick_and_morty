@@ -19,20 +19,28 @@ export default function Nav(props) {
       </div>
 
       <div>
-        <SearchBar onSearch={props.onSearch} />        
-      </div>
-
-      <div>
         <Link to="/about">
           <button className={styles.buttonAbout}>About</button>
         </Link>
       </div>
 
       <div>
+        <Link to= "/favorites">
+          <button className={styles.buttonFavorites} onClick={props.favorites}>Favorites</button>
+        </Link>
+      </div>
+
+      <div>
+        <SearchBar onSearch={props.onSearch} />        
+      </div>
+
+
+      <div>
         <Link to= "/">
           <button className={styles.buttonLogout} onClick={props.logout}>Logout</button>
         </Link>
       </div>
+
     </div>
   );
 }

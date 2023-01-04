@@ -7,9 +7,9 @@
     
     border-radius: 10px;
     padding: 4px;
- }
-
- .homeFiltrar{
+  }
+  
+  .homeFiltrar{
     background-color: rgb(22, 176, 214);    
     color: #ebdede;
     height: 30px;
@@ -20,30 +20,48 @@
     width: auto; 
     cursor: pointer;
     margin-top: 50px;
-}
-
-.homeFiltrar:hover {
+  }
+  
+  .homeFiltrar:hover {
     background-position:center;
     color: rgb(25, 22, 214);     
   }
+  
+  .buttonAbout{
+      background-color: rgb(22, 176, 214);  
+      color: #ebdede;  
+      height: 30px;
+      font-size: medium;
+      font-style:italic;
+      height: 30px;
+      margin: 10px;
+      width: auto; 
+      cursor: pointer;
+      margin-top: 50px;
+  }
+  
+  .buttonAbout:hover {
+      background-position:center;
+      color: rgb(25, 22, 214);     
+    }
 
-.buttonAbout{
-    background-color: rgb(22, 176, 214);  
-    color: #ebdede;  
-    height: 30px;
-    font-size: medium;
-    font-style:italic;
-    height: 30px;
-    margin: 10px;
-    width: auto; 
-    cursor: pointer;
-    margin-top: 50px;
+.buttonFavorites{
+  background-color: rgb(22, 176, 214);  
+      color: #ebdede;  
+      height: 30px;
+      font-size: medium;
+      font-style:italic;
+      height: 30px;
+      margin: 10px;
+      width: auto; 
+      cursor: pointer;
+      margin-top: 50px;
 }
 
-.buttonAbout:hover {
-    background-position:center;
-    color: rgb(25, 22, 214);     
-  }
+.buttonFavorites:hover {
+  background-position:center;
+  color: rgb(25, 22, 214);     
+}
 
 .buttonLogout{
     background-color: rgb(22, 176, 214);  

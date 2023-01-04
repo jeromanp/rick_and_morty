@@ -26,7 +26,7 @@
     text-size-adjust: 15vm;    
     top: 78%;
     left: 42px;
-    transform: translate(-10%, -100%);  
+    transform: translate(-8%, -70%);  
 }
 
 .name:hover {
@@ -73,20 +73,28 @@ img{
     align-items: center;
     display: flex;
     padding-block-end: 50px;
-    
+    padding-top: 20%;
 }
 
 .cerrarCard{    
     position: absolute;
-    height: auto;
-    width: auto;
+    height: 20px;
+    width: 30px;
     top: 2%;
-    left: 90%;
+    left: 87%;
 }
 
 .cerrarCard:hover {
     color: black;
     background-color:  rgb(255, 8, 8);    
   }  
+
+.favButton{
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 2%;
+    right: 85%;
+}
 
 
