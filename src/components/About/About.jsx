@@ -11,11 +11,6 @@ export default function About() {
 
   return (
     <>
-      <div>
-        <button className={styles.buttonBack} onClick={backtoHome}>
-          Volver
-        </button>
-      </div>
       <div className={styles.about}>
         <h1 className={styles.titleAbout}>Acerca de la App</h1>
 
