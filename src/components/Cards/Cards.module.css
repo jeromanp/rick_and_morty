@@ -8,14 +8,21 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    /* display: flex; */
 }
 
-.h3{
+.h3Home{
     color: rgb(215, 219, 233);
     text-align: justify;
     font-family: "LetraRickAndMorty";  
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-shadow: 2px 2px 4px rgba(203, 211, 199, 0.618);    
-    padding-left: 60px;
+    padding-left: 60px;    
+ }
+
+ .h3Cards{
+    color: rgb(215, 219, 233);
+    text-align: center;
+    font-family: "LetraRickAndMorty";  
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(203, 211, 199, 0.618);    
  }

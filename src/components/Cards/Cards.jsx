@@ -2,15 +2,21 @@ import Card from "../Card/Card";
 import style from "./Cards.module.css";
 
 export default function Cards(props) {
-  //array de objetos con los personajes
   const { characters } = props;
 
   return (
     <>
-      <div className={style.h3}>
-        <h3>Da click sobre el nombre para conocer más</h3>
+      <div className={style.h3Home}>
+        {characters.length === 0 ? (
+          <h3>Agrega un personaje por su ID</h3>
+        ) : null}
       </div>
       <div className={style.cards}>
+        <div className={style.h3Cards}>
+          {characters.length === 0 ? null : (
+            <h3>Da click sobre el nombre para conocer más</h3>
+          )}
+        </div>
         {
           //destructuring del array characters
           //se agrega el termino id al props para cuando se ejecuta onClose
