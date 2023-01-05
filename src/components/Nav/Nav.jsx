@@ -1,13 +1,14 @@
 import React from "react";
 import SearchBar from "../SeachBar/SearchBar";
 import styles from "./Nav.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav(props) {
-
+  const location = useLocation();
 
   return (
     <div className={styles.nav}>
+
       <div>
         <h1 className={styles.h1}>Rick And Morty</h1>
       </div>
@@ -18,32 +19,37 @@ export default function Nav(props) {
         </Link>
       </div>
 
-
-
       <div>
-        <SearchBar onSearch={props.onSearch} />        
+        <SearchBar onSearch={props.onSearch} />
       </div>
 
-      <div>
-        <Link to= "/favorites">
-          <button className={styles.buttonFavorites} onClick={props.favorites}>Favorites</button>
-        </Link>
-      </div>
+      {location.pathname !== "/favorites" && (
+        <div>
+          <Link to="/favorites">
+            <button
+              className={styles.buttonFavorites}
+              onClick={props.favorites}
+            >
+              Favorites
+            </button>
+          </Link>
+        </div>
+      )}
 
       <div>
         <Link to="/about">
           <button className={styles.buttonAbout}>About</button>
         </Link>
-      </div>
-      
+      </div>      
+
       <div>
-        <Link to= "/">
-          <button className={styles.buttonLogout} onClick={props.logout}>Logout</button>
+        <Link to="/">
+          <button className={styles.buttonLogout} onClick={props.logout}>
+            Logout
+          </button>
         </Link>
       </div>
-
     </div>
   );
 }
 
-// export default withRouter(Nav)
