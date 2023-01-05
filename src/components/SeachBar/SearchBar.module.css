@@ -1,23 +1,23 @@
 
 
 .inputCard{
-    height: 30px;
+    height: 22px;
     margin: 5px;
     width: 100px;    
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .buscarCard{
     background-color: rgb(22, 176, 214); 
     color: #ebdede;   
     height: 30px;
-    font-size: medium;
+    font-size: small;
     font-style:italic;
     height: 30px;
     margin: 10px;
     width: auto; 
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .buscarCard:hover {
