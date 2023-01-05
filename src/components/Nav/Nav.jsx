@@ -18,10 +18,10 @@ export default function Nav(props) {
         </Link>
       </div>
 
+
+
       <div>
-        <Link to="/about">
-          <button className={styles.buttonAbout}>About</button>
-        </Link>
+        <SearchBar onSearch={props.onSearch} />        
       </div>
 
       <div>
@@ -31,10 +31,11 @@ export default function Nav(props) {
       </div>
 
       <div>
-        <SearchBar onSearch={props.onSearch} />        
+        <Link to="/about">
+          <button className={styles.buttonAbout}>About</button>
+        </Link>
       </div>
-
-
+      
       <div>
         <Link to= "/">
           <button className={styles.buttonLogout} onClick={props.logout}>Logout</button>

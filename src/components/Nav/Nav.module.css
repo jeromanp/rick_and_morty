@@ -1,25 +1,23 @@
 .nav{
     font-style: normal;
-    background-color: rgba(32, 18, 224, 0.589);
+    background-color: rgba(32, 18, 224, 0.404);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
-    border-radius: 10px;
-    padding: 4px;
+    justify-content: space-around;    
+    height: 90px;
   }
   
   .homeFiltrar{
-    background-color: rgb(22, 176, 214);    
-    color: #ebdede;
+    background-color: rgb(22, 176, 214); 
+    color: #ebdede;   
     height: 30px;
-    font-size: medium;
+    font-size: small;
     font-style:italic;
     height: 30px;
     margin: 10px;
     width: auto; 
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   
   .homeFiltrar:hover {
@@ -28,16 +26,16 @@
   }
   
   .buttonAbout{
-      background-color: rgb(22, 176, 214);  
-      color: #ebdede;  
-      height: 30px;
-      font-size: medium;
-      font-style:italic;
-      height: 30px;
-      margin: 10px;
-      width: auto; 
-      cursor: pointer;
-      margin-top: 50px;
+    background-color: rgb(22, 176, 214); 
+    color: #ebdede;   
+    height: 30px;
+    font-size: small;
+    font-style:italic;
+    height: 30px;
+    margin: 10px;
+    width: auto; 
+    cursor: pointer;
+    margin-top: 30px;
   }
   
   .buttonAbout:hover {
@@ -46,16 +44,16 @@
     }
 
 .buttonFavorites{
-  background-color: rgb(22, 176, 214);  
-      color: #ebdede;  
-      height: 30px;
-      font-size: medium;
-      font-style:italic;
-      height: 30px;
-      margin: 10px;
-      width: auto; 
-      cursor: pointer;
-      margin-top: 50px;
+  background-color: rgb(22, 176, 214); 
+    color: #ebdede;   
+    height: 30px;
+    font-size: small;
+    font-style:italic;
+    height: 30px;
+    margin: 10px;
+    width: auto; 
+    cursor: pointer;
+    margin-top: 30px;
 }
 
 .buttonFavorites:hover {
@@ -64,16 +62,16 @@
 }
 
 .buttonLogout{
-    background-color: rgb(22, 176, 214);  
-    color: #ebdede;  
-    height: 30px;
-    font-size: medium;
-    font-style:italic;
-    height: 30px;
-    margin: 10px;
-    width: auto; 
-    cursor: pointer;
-    margin-top: 50px;
+  background-color: rgb(22, 176, 214); 
+  color: #ebdede;   
+  height: 30px;
+  font-size: small;
+  font-style:italic;
+  height: 30px;
+  margin: 10px;
+  width: auto; 
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .buttonLogout:hover {
@@ -82,13 +80,10 @@
   }
 
 .h1{
-    color:  rgb(212, 238, 245); 
-    text-align: center;
+    color:  rgb(190, 192, 223); 
     font-family: "LetraRickAndMorty";
-    font-size: 1.2cm;
-    letter-spacing: 7px;
-    text-shadow: 2px 2px 4px rgb(28, 29, 28);
-    bottom: 0.8em;
-    z-index: 50;
-    -webkit-text-stroke: 1px rgba(28, 9, 78, 0.5);
+    font-size: 1cm;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgb(170, 183, 206);
+    -webkit-text-stroke: 1px rgba(115, 83, 196, 0.5);
 }
