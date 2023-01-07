@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import { useNavigate } from "react-router-dom";
+import Nav from "../Nav/Nav";
 
 export default function About() {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ export default function About() {
 
   return (
     <>
+      <Nav />
+
       <div className={styles.about}>
         <h1 className={styles.titleAbout}>Acerca de la App</h1>
 
