@@ -12,11 +12,17 @@
 
 .h1 {
   font-family: LetraRickAndMorty;
-  color: rgb(224, 233, 250);
+  color: rgb(108, 120, 142);
   text-shadow: 0px 0px 25px #afafc7;
+  background: #080808;
   text-align: center;
   font-size: 30px;
-  letter-spacing: 3px;  
+  letter-spacing: 3px;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  transform: translate(350%, -20%);
+
 }
 
 .buttonBack {
@@ -48,4 +54,55 @@
 
 .buttonBack :focus {
   outline: none;
+}
+
+.select {
+  max-width: 150px;
+  position: relative;
+}
+
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 32px;
+  /* outline: 0;  */
+  /* border: 0; */
+  border-radius: 0;
+  background: #144896;
+  color: #c71616;
+  font-size: 1em;
+  color: rgb(107, 169, 227);
+  font-family: "Quicksand", sans-serif;
+  border: 2px solid rgba(212, 167, 167, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.select select:hover {
+  background: rgb(107, 169, 227);
+  color: #144896;
+}
+
+.buttonReset{
+  font-family: LetraRickAndMorty;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acb2bb;
+  background-image: linear-gradient(315deg, #0c398d 0%, #b6b7cd 74%);
+  background-size: 200% 100%;
+  transition: 500ms;
+  color: #150dad;
+  margin: 25px;
+  font-size: large;
+  transform: translate(0%, -10%);
 }

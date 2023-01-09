@@ -39,37 +39,44 @@ export default function Favorites(props) {
   return (
     <>
       <div>
-        <select name="Order" defaultValue={"Default"} onChange={handleSelect}>
-          <option value="Default" disabled>Select Order</option>
-          {/* <option value="All">All</option> */}
-
-          <option value="Ascendente">Ascendente</option>
-          <option value="Descendente">Descendente</option>
-        </select>
-
-        <select name="Filter" defaultValue={"Default"} onChange={handleSelect}>
-          <option value="Default" disabled>Select Filter</option>
-          {/* <option value="All">All</option> */}
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Genderles">Genderles</option>
-          <option value="Unknown">Unknown</option>
-        </select>
-
-        <div>
-          <button onClick={()=>dispatch(resetCard())}>Reset</button>
-        </div>
-
-      </div>
-
-      <div>
         <button className={style.buttonBack} onClick={backtoHome}>
           Volver
         </button>
       </div>
 
       <div className={style.cards}>
-        <h1 className={style.h1}>Favorites</h1>
+        <div className={style.select}>
+          <h1 className={style.h1}>Your favorites</h1>
+
+          <select name="Order" defaultValue={"Default"} onChange={handleSelect}>
+            <option value="Default" disabled>
+              Select Order
+            </option>
+            {/* <option value="All">All</option> */}
+
+            <option value="Ascendente">Ascendente</option>
+            <option value="Descendente">Descendente</option>
+          </select>
+
+          <select
+            name="Filter"
+            defaultValue={"Default"}
+            onChange={handleSelect}
+          >
+            <option value="Default" disabled>
+              Select Filter
+            </option>
+            {/* <option value="All">All</option> */}
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Genderles">Genderles</option>
+            <option value="Unknown">Unknown</option>
+          </select>
+
+          <div>
+            <button className={style.buttonReset} onClick={() => dispatch(resetCard())}>Reset All</button>
+          </div>
+        </div>
         {myFavorites?.map((personaje) => (
           <Card
             key={personaje.id}
@@ -85,4 +92,3 @@ export default function Favorites(props) {
     </>
   );
 }
-
