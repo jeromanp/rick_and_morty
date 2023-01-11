@@ -14,6 +14,7 @@ let servidor = http.createServer((req, res) => {
             }else {
                 // res.writeHead(200, {"Content-Type" : "application/json"})
                 // res.end(data.id)
+                
                 const url=req.url.split("/")
                 const characterID=url[url.length-1]
                 const character = data.characters.find(char => char.id === characterID)
