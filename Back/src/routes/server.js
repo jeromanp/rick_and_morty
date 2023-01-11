@@ -1,29 +1,40 @@
 let http = require("http");
-let fs = require("fs")
-
+const characters = require("../utils/data");
 let PORT = 3001;
 
-let servidor = http.createServer((req, res) => {
-    console.log(`Servidor levantado en el puerto ${PORT}`)
+function error(res) {
+  res.writeHead(404, { "Content-Type": "text/plain" });
+  res.end("Error");
+}
 
-    if(req.url === "rickandmorty/character"){
-        fs.readFile(__dirname+"/Back/utils/data.js", "utf8", (error, data)=>{
-            if(error){
-                res.writeHead(404, {"Content-Type" : "text/plain"})
-                res.end("Archivo json no encontrado")
-            }else {
-                // res.writeHead(200, {"Content-Type" : "application/json"})
-                // res.end(data.id)
-                
-                const url=req.url.split("/")
-                const characterID=url[url.length-1]
-                const character = data.characters.find(char => char.id === characterID)
-                if(character){
-                    res.writeHead(200, {"Content-Type":"application/json"})
-                    res.end(JSON.stringify(character))
-                }
-            }
-        })
-        return
+http
+  .createServer((req, res) => {
+    const allUrl = req.url.split("/");
+    //devuelve un array, el cual el ID es la ultima posicion
+    // console.log(allUrl)
+    const characterID = Number(allUrl.pop()); //entrega el ID
+    const url = allUrl.join("/");
+
+    if (url === "/rickandmorty/character") {
+      const character = characters.find((ch) => {
+        return ch.id === characterID;
+      });
+
+      if (character) {
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify(character));
+      } else {
+        error(res);
+      }
+    } else if (req.url === "/rickandmorty/characters") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(characters));
+    } else {
+      error(res);
     }
-}).listen(PORT, "localhost");
+  })
+  .listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
+  });
+
+
