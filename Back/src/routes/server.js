@@ -1,10 +1,12 @@
 let http = require("http");
 const characters = require("../utils/data");
 let PORT = 3001;
+const { getCharById, getCharDetail } = require("../controllers/index");
 
+//funcion error
 function error(res) {
   res.writeHead(404, { "Content-Type": "text/plain" });
-  res.end("Error");
+  res.end("Error, Route not found");
 }
 
 http
@@ -15,26 +17,15 @@ http
     const characterID = Number(allUrl.pop()); //entrega el ID
     const url = allUrl.join("/");
 
-    if (url === "/rickandmorty/character") {
-      const character = characters.find((ch) => {
-        return ch.id === characterID;
-      });
-
-      if (character) {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify(character));
-      } else {
+    switch (url) {
+      case "/onsearch":
+        return getCharById(res, id);
+      case "/detail":
+        return getCharDetail(res, id);
+      default:
         error(res);
-      }
-    } else if (req.url === "/rickandmorty/characters") {
-      res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(JSON.stringify(characters));
-    } else {
-      error(res);
     }
   })
   .listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
-
-
