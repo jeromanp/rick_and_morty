@@ -21,16 +21,18 @@ export default function About() {
         <h2 className={styles.h2}>¿Porqué se implementó este proyecto</h2>
 
         <p className={styles.p}>
-          Rick and Morty es un pequeño proyecto desarrolaldo con React como
-          componente principal, con el objetivo de poder interactuar y mejorar
-          conocimientos y habilidades obtenidos durante el curson del Bootcamp
-          de Soy Henry en su Módulo 2 dedicado a la parte del FrontEnd.
+          Rick and Morty es un pequeño proyecto desarrollado con React y Redux
+          como librerias principales, con el objetivo de poder interactuar y
+          mejorar conocimientos y habilidades obtenidos durante el curson del
+          Bootcamp de Soy Henry en su Módulo 2 dedicado a la parte del FrontEnd.
         </p>
 
         <p className={styles.p}>
           Conocemos de las grandes cosas que podemos hacer con el conocimiento
-          de una Librería como React, y que mejor manera de poder poner en
-          práctica nuestros conocimientos que con la realizacón de este Proyecto
+          de una Librería como React y Redux, y que mejor manera de poder poner
+          en práctica nuestros conocimientos que con la realizacón de este
+          Proyecto que si bien es muy simple en su composición, se creo en un
+          tiempo estimado de 20días.
         </p>
 
         <p className={styles.p}>
@@ -39,6 +41,11 @@ export default function About() {
           autoaprendizaje, pero sobretodo poder ver reflejado una parte de
           nuestra creatividad y personalización en un Proyecto que poco a poco
           se fue desarrollando durante el curso del Bootcamp.
+        </p>
+
+        <p className={styles.p}>
+          Ahora se esta implementando la parte de BackEnd dentro de la misma
+          app, que en estos momentos se encuentra en desarrollo
         </p>
         <br />
 

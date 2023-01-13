@@ -18,7 +18,7 @@ export default function App() {
     if (password === userData.password && username === userData.username) {
       setAccess(true);
       navigate("/home");
-      alert("Has accedido a la App");
+      // alert("Has accedido a la App");
     } else {
       alert("username y/o password incorrectos");
     }
