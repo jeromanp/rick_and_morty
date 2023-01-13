@@ -39,7 +39,8 @@ export default function App() {
   const location = useLocation();
 
   function onSearch(id) {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    //https://rickandmortyapi.com/api/character/${id}
+    fetch(`http://localhost:3001/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {

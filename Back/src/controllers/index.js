@@ -11,7 +11,7 @@ const getCharById = (res, id) => {
         species: data.species,
         image: data.image,
       };
-      res.writeHead(200, { "Content-Type": "application/json" });
+      res.writeHead(200, { "Content-type": "application/json" });
       res.end(JSON.stringify(character));
     })
     .catch((error) => {

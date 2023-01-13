@@ -1,12 +1,12 @@
-let http = require("http");
-const characters = require("../utils/data");
-let PORT = 3001;
+const http = require("http");
+const PORT = 3001;
+// const characters = require("../utils/data");
 const { getCharById, getCharDetail } = require("../controllers/index");
 
 //funcion error
 function error(res) {
   res.writeHead(404, { "Content-Type": "text/plain" });
-  res.end("Error, Route not found");
+  res.end("Error!!, Route not found");
 }
 
 http
@@ -19,9 +19,9 @@ http
 
     switch (url) {
       case "/onsearch":
-        return getCharById(res, id);
+        return getCharById(res, characterID);
       case "/detail":
-        return getCharDetail(res, id);
+        return getCharDetail(res, characterID);
       default:
         error(res);
     }

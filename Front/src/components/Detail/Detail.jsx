@@ -15,7 +15,8 @@ export default function Detail() {
   }
 
   useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+    //https://rickandmortyapi.com/api/character/${detailId}
+    fetch(`http://localhost:3001/onsearch/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.name) {
