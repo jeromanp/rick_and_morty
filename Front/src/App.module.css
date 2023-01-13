@@ -8,7 +8,8 @@
 }
 
 body{
-   background-image:url("https://p4.wallpaperbetter.com/wallpaper/862/502/357/tv-show-rick-and-morty-cartoon-humor-wallpaper-preview.jpg");  
+   
+   background-image: url("./Imagen/body_RyM.jpg");
    background-size: cover;
    background-position:top; 
 }
