@@ -7,11 +7,12 @@
    src: url("./components/Fuentes/get_schwifty.eot"), url("./components/Fuentes/get_schwifty.ttf");   
 }
 
-body{
-   
+body{   
    background-image: url("./Imagen/body_RyM.jpg");
-   background-size: cover;
-   background-position:top; 
+   background-size: 100%;
+   width: auto;
+   background-position:top;
+   background-repeat:repeat-y
 }
 
 .h1{
