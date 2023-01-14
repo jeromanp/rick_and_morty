@@ -1,43 +1,39 @@
 .App {
-   text-align: right;      
+  text-align: right;
 }
 
-@font-face{
-   font-family: "LetraRickAndMorty";
-   src: url("./components/Fuentes/get_schwifty.eot"), url("./components/Fuentes/get_schwifty.ttf");   
+@font-face {
+  font-family: "LetraRickAndMorty";
+  src: url("./components/Fuentes/get_schwifty.eot"),
+    url("./components/Fuentes/get_schwifty.ttf");
 }
 
-body{   
-   background-image: url("./Imagen/body_RyM.jpg");
-   background-size: 100%;
-   width: auto;
-   background-position:top;
-   background-repeat:repeat-y
+body {
+  background-image: url("./Imagen/body_RyM.jpg");
+  background-size: 100%;
+  width: auto;
+  background-position: top;
+  background-repeat: repeat-y;
 }
 
-.h1{
-   color: rgb(12, 78, 219);
-   text-align: center;
-   font-family: "LetraRickAndMorty";
-   font-size: 1.2cm;
-   letter-spacing: 7px;
-   text-shadow: 2px 2px 4px rgb(231, 238, 228);
-   bottom: 0.8em;
-   z-index: 50;
-   -webkit-text-stroke: 1px rgba(11, 40, 4, 0.5);
+.h1 {
+  color: rgb(12, 78, 219);
+  text-align: center;
+  font-family: "LetraRickAndMorty";
+  font-size: 1.7cm;
+  letter-spacing: 7px;
+  text-shadow: 2px 2px 4px rgb(154, 155, 196);
+  -webkit-text-stroke: 1px rgba(41, 58, 136, 0.5);
 }
 
-.h3{
-   color: rgb(65, 10, 194);
-   text-align: center;
-   font-family: "LetraRickAndMorty";  
-   letter-spacing: 2px;
-   text-shadow: 2px 2px 4px rgba(203, 211, 199, 0.618);
+.h3 {
+  color: rgb(1, 10, 29);
+  text-align: center;
+  font-family: "LetraRickAndMorty";
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgb(1, 2, 36);
+  -webkit-text-stroke: 1px rgba(203, 205, 218, 0.5);
+  font-size: x-large;
+  padding-top: 30%;  
+  position: static;
 }
-
-
-
-
-
-
-

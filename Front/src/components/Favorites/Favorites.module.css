@@ -8,6 +8,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .h1 {
@@ -20,9 +22,8 @@
   letter-spacing: 3px;
   margin: auto;
   left: 50%;
-  position: absolute;
-  transform: translate(350%, -20%);
-
+  text-align: center;
+  position: static;
 }
 
 .buttonBack {
@@ -58,7 +59,6 @@
 
 .select {
   max-width: 150px;
-  position: relative;
 }
 
 .select select {
@@ -67,8 +67,6 @@
   cursor: pointer;
   padding: 7px 10px;
   height: 32px;
-  /* outline: 0;  */
-  /* border: 0; */
   border-radius: 0;
   background: #144896;
   color: #c71616;
@@ -106,3 +104,21 @@
   font-size: large;
   transform: translate(0%, -10%);
 }
+
+.buttonReset:hover {
+  background-position: center;
+  color: #3c43a8;
+  background-color: #0b0e52;
+}
+
+.h2{
+  color: rgb(215, 219, 233);
+  font-family:'Lucida Sans';
+  letter-spacing: 1px; 
+  position: absolute;
+  left: 30%;
+  letter-spacing: 3px;  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+

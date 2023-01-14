@@ -75,15 +75,17 @@ export default function App() {
 
   return (
     <div className={styles.App}>
-      <div>
+
+      <span>
         {location.pathname === "/" ? (
           <>
-            <h1 className={styles.h1}>Bienvenido a la App de Rick And Morty</h1>
+            <h1 className={styles.h1}>Rick And Morty</h1>
+            <h3 className={styles.h3}>by: José Eduardo Roman</h3>            
           </>
         ) : (
           <Nav onSearch={onSearch} logout={logout} />
         )}
-      </div>
+      </span>
 
       <Routes>
         <Route path="/" element=<Form login={login} /> />

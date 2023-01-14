@@ -1,7 +1,6 @@
 .container {
   background-color: rgba(174, 191, 216, 0.612);
   color: aliceblue;
-  /* font-family: LetraRickAndMorty; */
   text-align: center;
   display: flexbox;
   border-radius: 40px;
@@ -18,7 +17,7 @@
 
 .h2{
   color: rgb(12, 63, 204);
-  text-shadow: 2px 2px 4px rgb(219, 220, 230);
+  text-shadow: 2px 2px 4px rgb(125, 128, 158);
 }
 
 .h4{
