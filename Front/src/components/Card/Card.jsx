@@ -45,7 +45,7 @@ export default function Card(props) {
       )}
 
       <button className={styles.cerrarCard} onClick={props.onClose}>
-        X
+      ❌
       </button>
 
       <div>

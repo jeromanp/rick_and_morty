@@ -40,8 +40,7 @@ export default function Favorites(props) {
           <div className={style.select}>
             <div className={style.h2}>
             <h3>Puedes seleccionar el Orden ⏫⏬ o Filtar por géneros 🚹🚺</h3>   
-            <h4>Da click en el ❤️ para eliminar de tus Favoritos</h4>    
-            <h4>Da click sobre la ❌ para eliminar de tus Favoritos</h4>          
+            <h4>Da click en el ❤️ o la ❌ para eliminar de tus Favoritos</h4>    
             </div>
             <select
               name="Order"

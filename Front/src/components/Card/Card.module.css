@@ -78,9 +78,9 @@ img{
 
 .cerrarCard{    
     position: absolute;
-    height: 20px;
-    width: 30px;
     top: 2%;
+    height: auto;
+    width: auto;
     left: 87%;
 }
 
@@ -94,7 +94,12 @@ img{
     height: auto;
     width: auto;
     top: 2%;
-    right: 85%;
+    right: 87%;
 }
+
+.favButton:hover {
+    color: black;
+    background-color:  rgb(255, 8, 8);    
+  }  
 
 
