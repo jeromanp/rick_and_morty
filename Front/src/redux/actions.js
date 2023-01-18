@@ -26,7 +26,7 @@ export function deleteFavorite(id) {
       );
       dispatch({
         type: DELETE_FAV,
-        payload: id,
+        payload:id,
       });
     } catch (error) {
       console.log(error);
