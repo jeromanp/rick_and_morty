@@ -4,11 +4,11 @@ const axios = require ("axios")
 export function addFavorite(char) {
   return function (dispatch) {
     axios.post(`http://localhost:3001/rickandmorty/fav`, char)
-      .then((value) => value.json())
+      .then((value) => value.data)
       .then((dis) => {
         dispatch({
           type: ADD_FAV,
-          payload: dis,
+          payload: dis
         });
       });
   };
