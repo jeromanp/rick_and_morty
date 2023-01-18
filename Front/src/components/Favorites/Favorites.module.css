@@ -88,8 +88,8 @@
   font-family: LetraRickAndMorty;
   letter-spacing: 4px;
   text-align: center;
-  width: 90px;
-  height: 50px;
+  width: 110px;
+  height: 70px;
   cursor: pointer;
   border-radius: 20px;
   display: flex;
@@ -111,8 +111,10 @@
   background-color: #0b0e52;
 }
 
-.h2{
+.h4{
   color: rgb(215, 219, 233);
+  background-color: #0b0f52b4;
+  background-size: auto;
   font-family:'Lucida Sans';
   letter-spacing: 1px; 
   position: absolute;

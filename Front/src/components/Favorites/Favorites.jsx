@@ -34,14 +34,29 @@ export default function Favorites(props) {
         </button>
         <h1 className={style.h1}>Your favorites</h1>
       </div>
+      <br/>
 
       <div className={style.cards}>
+        <div>
+          <button
+            className={style.buttonReset}
+            onClick={() => dispatch(resetCard())}
+          >
+            Reset Filters
+          </button>
+        </div>
+
         {myFavorites.length === 0 ? null : (
           <div className={style.select}>
-            <div className={style.h2}>
-            <h3>Puedes seleccionar el Orden ⏫⏬ o Filtar por géneros 🚹🚺</h3>   
-            <h4>Da click en el ❤️ o la ❌ para eliminar de tus Favoritos</h4>    
+            <div className={style.h4}>
+              <h4>
+                Puedes seleccionar el Orden ⏫⏬ o Filtar por géneros 🚹🚺
+              </h4>
+              <h4>Da click en el ❤️ o la ❌ para eliminar de tus Favoritos</h4>
             </div>
+            <br />
+        
+
             <select
               name="Order"
               defaultValue={"Default"}
@@ -68,14 +83,10 @@ export default function Favorites(props) {
               <option value="Genderles">Genderles</option>
               <option value="Unknown">Unknown</option>
             </select>
-            <div>
-              <button
-                className={style.buttonReset}
-                onClick={() => dispatch(resetCard())}
-              >
-                Reset All
-              </button>
-            </div>
+            <br/>
+            <br/>
+
+
           </div>
         )}
 
