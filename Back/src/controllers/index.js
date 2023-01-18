@@ -1,6 +1,10 @@
 const axios = require("axios");
 
-const getCharById = (res, id) => {
+//array para BD
+let favorites = [];
+
+const getCharacterId = (req, res) => {
+  const { id } = req.params;
   axios(`https://rickandmortyapi.com/api/character/${id}`)
     .then((response) => response.data)
     .then((data) => {
@@ -20,8 +24,10 @@ const getCharById = (res, id) => {
     });
 };
 
-const getCharDetail = (res, id) => {
-  axios(`https://rickandmortyapi.com/api/character/${id}`)
+const getDetailID = (res, res) => {
+  const { detailId } = req.params;
+
+  axios(`https://rickandmortyapi.com/api/character/${detailId}`)
     .then((response) => response.data)
     .then((data) => {
       const character = {
@@ -42,7 +48,32 @@ const getCharDetail = (res, id) => {
     });
 };
 
+const getFavorite = function (req, res) {
+  res.status(200).end(JSON.stringify(favorites));
+};
+
+const postFavorite = function (req, res) {
+  favorites.push(req.body);
+  // console.log("post fav ==>", favorites);
+  res.status(200).end(JSON.stringify(req.body));
+};
+
+const deleteFavoriteId = function (req, res) {
+  const { id } = req.params;
+  const character = favorites.find((char) => char.id === Number(id));
+  if (character) {
+    favorites=favorites.filter((char)=> char.id !== Number(id))
+    console.log("delete fav ==>", favorites);
+    res.status(200).end(JSON.stringify(character));
+  } else {
+    res.status(400).end("this character is not in Favorites");
+  }
+};
+
 module.exports = {
-  getCharById,
-  getCharDetail,
+  getCharacterId,
+  getDetailID,
+  getFavorite,
+  postFavorite,
+  deleteFavoriteId,
 };
