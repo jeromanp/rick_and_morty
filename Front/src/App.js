@@ -41,27 +41,25 @@ export default function App() {
 
   async function onSearch(id) {
     try {
-      const resultChar = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      let result = resultChar.data
-      if (result.name) {
+      const resultChar = await axios(
+        `http://localhost:3001/rickandmorty/character/${id}`
+      );
+      let char = resultChar.data;
+      if (char.name) {
         //para no repetir personajes
-        let existe = characters.find((event) => event.id === result.id);
+        let existe = characters.find((event) => event.id === char.id);
         if (existe) {
           alert("Ese personaje ya existe");
         } else {
-          setCharacters((oldChars) => [...oldChars, result]);
+          setCharacters((oldChars) => [...oldChars, char]);
         }
         //termina funcion para no repetir personajes
       } else {
-        window.alert("No hay personajes con ese ID");
+        window.alert("No hay personajes con ese ID!!");
       }
     } catch (error) {
       console.log(error);
     }
-
- 
-
-      
   }
 
   function onClose(id) {
