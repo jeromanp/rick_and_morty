@@ -40,7 +40,7 @@ export default function App() {
 
   function onSearch(id) {
     //https://rickandmortyapi.com/api/character/${id}
-    fetch(`http://localhost:3001/onsearch/${id}`)
+    fetch(`http://localhost:3001/rickandmorty/character/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
