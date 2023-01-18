@@ -5,8 +5,9 @@ import Nav from "./components/Nav/Nav.jsx";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form";
-import Favorites from "./components/Favorites/Favorites.jsx"
+import Favorites from "./components/Favorites/Favorites.jsx";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function App() {
   const navigate = useNavigate();
@@ -38,24 +39,29 @@ export default function App() {
   const [characters, setCharacters] = useState([]);
   const location = useLocation();
 
-  function onSearch(id) {
-    //https://rickandmortyapi.com/api/character/${id}
-    fetch(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.name) {
-          //para no repetir personajes
-          let existe = characters.find((event) => event.id === data.id);
-          if (existe) {
-            alert("Ese personaje ya existe");
-          } else {
-            setCharacters((oldChars) => [...oldChars, data]);
-          }
-          //termina funcion para no repetir personajes
+  async function onSearch(id) {
+    try {
+      const resultChar = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      let result = resultChar.data
+      if (result.name) {
+        //para no repetir personajes
+        let existe = characters.find((event) => event.id === result.id);
+        if (existe) {
+          alert("Ese personaje ya existe");
         } else {
-          window.alert("No hay personajes con ese ID");
+          setCharacters((oldChars) => [...oldChars, result]);
         }
-      });
+        //termina funcion para no repetir personajes
+      } else {
+        window.alert("No hay personajes con ese ID");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+ 
+
+      
   }
 
   function onClose(id) {
@@ -75,12 +81,11 @@ export default function App() {
 
   return (
     <div className={styles.App}>
-
       <span>
         {location.pathname === "/" ? (
           <>
             <h1 className={styles.h1}>Rick And Morty</h1>
-            <h3 className={styles.h3}>by: José Eduardo Roman</h3>            
+            <h3 className={styles.h3}>by: José Eduardo Roman</h3>
           </>
         ) : (
           <Nav onSearch={onSearch} logout={logout} />
@@ -95,7 +100,10 @@ export default function App() {
         />
         <Route path="/about" element=<About /> />
         <Route path="/detail/:detailId" element=<Detail /> />
-        <Route path="/favorites" element=<Favorites characters={characters} onClose={onClose}/> />
+        <Route
+          path="/favorites"
+          element=<Favorites characters={characters} onClose={onClose} />
+        />
       </Routes>
     </div>
   );
