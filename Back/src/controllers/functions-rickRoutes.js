@@ -24,7 +24,7 @@ const getCharacterId = (req, res) => {
     });
 };
 
-const getDetailID = (res, res) => {
+const getDetailID = (req, res) => {
   const { detailId } = req.params;
 
   axios(`https://rickandmortyapi.com/api/character/${detailId}`)
