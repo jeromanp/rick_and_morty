@@ -1,5 +1,5 @@
 import { ADD_FAV, DELETE_FAV, FILTER, ORDER, RESET } from "./types";
-import axios from "axios"
+const axios = require ("axios")
 
 export function addFavorite(char) {
   return function (dispatch) {
