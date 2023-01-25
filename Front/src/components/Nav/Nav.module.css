@@ -80,10 +80,10 @@
   }
 
 .h1{
-    color:  rgb(190, 192, 223); 
+  color: rgb(12, 78, 219);
     font-family: "LetraRickAndMorty";
     font-size: 1cm;
     letter-spacing: 5px;
-    text-shadow: 2px 2px 4px rgb(170, 183, 206);
-    -webkit-text-stroke: 1px rgba(115, 83, 196, 0.5);
+    text-shadow: 2px 2px 4px rgb(154, 155, 196);
+    -webkit-text-stroke: 1px rgba(41, 58, 136, 0.5);
 }
