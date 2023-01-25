@@ -21,38 +21,22 @@ export default function About() {
         <h2 className={styles.h2}>¿Porqué se implementó este proyecto</h2>
 
         <p className={styles.p}>
-          Rick and Morty es un pequeño proyecto desarrollado con React y Redux
-          como librerias principales, con el objetivo de poder interactuar y
-          mejorar conocimientos y habilidades obtenidos durante el curson del
-          Bootcamp de Soy Henry en su Módulo 2 dedicado a la parte del FrontEnd.
+          Rick and Morty es un proyecto desarrollado con React, Redux, y Express 
+          como componentes principales, con el objetivo de poder interactuar y
+          mejorar conocimientos y habilidades obtenidos durante el curso del
+          Bootcamp de Henry en su Módulo 2 y 3 dedicado a la parte del FrontEnd y Backend
         </p>
 
         <p className={styles.p}>
-          Conocemos de las grandes cosas que podemos hacer con el conocimiento
-          de una Librería como React y Redux, y que mejor manera de poder poner
-          en práctica nuestros conocimientos que con la realizacón de este
-          Proyecto que si bien es muy simple en su composición, se creo en un
-          tiempo estimado de 20días.
+          Este proyecto cuenta con muchas horas de trabajo, como para hacer el código, leer documentación y hasta resolver bugs. El propósito de este Proyecto es poder implementar parte del conocimiento del Bootcamp así como de perfeccionar nuestra técnica de autoaprendizaje, pero sobretodo poder ver reflejado una parte de nuestra creatividad y personalización en un Proyecto que poco a poco se fue desarrollando durante el curso del Bootcamp.
         </p>
 
-        <p className={styles.p}>
-          El propósito de este Proyecto es poder implementar parte del
-          conocimiento del Bootcamp así como de perfeccionar nuestra técnica de
-          autoaprendizaje, pero sobretodo poder ver reflejado una parte de
-          nuestra creatividad y personalización en un Proyecto que poco a poco
-          se fue desarrollando durante el curso del Bootcamp.
-        </p>
-
-        <p className={styles.p}>
-          Ahora se esta implementando la parte de BackEnd dentro de la misma
-          app, que en estos momentos se encuentra en desarrollo
-        </p>
-        <br />
+   
 
         <h2 className={styles.h2}>Sobre el autor</h2>
 
         <p className={styles.p}>
-          Mi nombre es José Eduardo Román Piña, termine la Ingeniería en
+          Mi nombre es José Eduardo Román Piña, orgullosamente de México 🇲🇽 , termine la Ingeniería en
           Telecomunicaciones, Sistemas y Electrónica en la Universidad Nacional
           Autónoma de México en el año 2018. Durante un año me especialice en
           Switching and Routing con la tecnología de Cisco.
@@ -63,16 +47,9 @@ export default function About() {
           de internet, dedicandome a brindar los servicios de video, telefonía e
           internet las 24 horas del día, 365 días de año, así como el
           mantenimiento, administración, operación, atención a fallas, ejecución
-          de Ventanas de Mantenimiento en 3 sitios diferentes, Atlacomulco,
-          Ixtlahuca y Jilotepec en el Estado de México.
+          de Ventanas de Mantenimiento en 3 sitios diferentes.
         </p>
 
-        <p className={styles.p}>
-          Me agradaba mi trabajo, ya que siempre me fije la tarea de poder
-          ayudar a los clientes que dependían directamente de mi trabajo, sin
-          embargo requería de bastante tiempo y dedicación. Lo que me obligo a
-          buscar otras opciones.
-        </p>
 
         <p className={styles.p}>
           Siempre he tenido la curiosidad por aprender otras tecnologías que
@@ -87,7 +64,7 @@ export default function About() {
           este texto y decirme... ¡Si pude!
         </p>
 
-        <p className={styles.p}>Gracias Henry por aparecerte en mi camino.</p>
+        <p className={styles.p}>Gracias Henry por aparecerte en mi camino</p>
       </div>
       <div>
         <button className={styles.buttonBack} onClick={backtoHome}>
