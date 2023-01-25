@@ -3,7 +3,7 @@ import style from "./Favorites.module.css";
 import { useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import { useSelector, useDispatch } from "react-redux";
-import { filterCard, orderCard, resetCard } from "../../redux/actions";
+import { filterCard, orderCard, resetCard, deleteFavorite } from "../../redux/actions";
 
 export default function Favorites(props) {
   const navigate = useNavigate();
@@ -26,6 +26,11 @@ export default function Favorites(props) {
     }
   }
 
+  function onCloseFav(id){
+    props.onClose(id)
+    dispatch(deleteFavorite(id))
+  }
+
   return (
     <>
       <div>
@@ -42,7 +47,7 @@ export default function Favorites(props) {
             className={style.buttonReset}
             onClick={() => dispatch(resetCard())}
           >
-            Reset Filters
+            Reset All
           </button>
         </div>
 
@@ -52,9 +57,11 @@ export default function Favorites(props) {
               <h4>
                 Puedes seleccionar el Orden ⏫⏬ o Filtar por géneros 🚹🚺
               </h4>
-              <h4>Da click en el ❤️ o la ❌ para eliminar de tus Favoritos</h4>
+              <h4>Da click en el ❤️ para eliminar de tus Favoritos</h4>
+              <h4>O da click en el ❌ para eliminar de tus Busquedas</h4>
             </div>
-            <br />
+  
+
         
 
             <select
@@ -98,7 +105,7 @@ export default function Favorites(props) {
             species={personaje.species}
             gender={personaje.gender}
             image={personaje.image}
-            onClose={() => props.onClose(personaje.id)}
+            onClose={() => onCloseFav(personaje.id)}
           />
         ))}
       </div>
