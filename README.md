@@ -11,6 +11,12 @@
   
   <p>El resultado de la pagina web esta en proceso del deployado, debido a la carga que se tienen dentro del bootcamp, sin embargo en cuanto este lista, se posteara en enlace a través de este archivo</p>
   
+  <p>IMPORTANTE!!! <br>
+  
+  Entrar con estas credenciales: <br>
+  Username: jeroman@gmail.com,<br>
+  Password: 1password</p>
+  
   
 </div>
 
