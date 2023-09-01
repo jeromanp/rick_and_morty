@@ -7,6 +7,7 @@ export default function Detail() {
   const { detailId } = useParams();
   const [character, setCharacter] = useState({});
   console.log(detailId);
+  const backend = "https://rym.onrender.com"
 
   const navigate = useNavigate();
   function backToHome() {
@@ -16,7 +17,7 @@ export default function Detail() {
 
   useEffect(() => {
     //https://rickandmortyapi.com/api/character/${detailId}
-    fetch(`https://rick-and-morty-jeromanp.vercel.app/rickandmorty/character/${detailId}`)
+    fetch(`${backend}/rickandmorty/character/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.name) {

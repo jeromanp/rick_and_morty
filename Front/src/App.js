@@ -14,6 +14,7 @@ export default function App() {
   const [access, setAccess] = useState(false);
   const username = "jeroman@email.com";
   const password = "1password";
+  const backend = "https://rym.onrender.com"
 
   const login = (userData) => {
     if (password === userData.password && username === userData.username) {
@@ -42,7 +43,7 @@ export default function App() {
   async function onSearch(id) {
     try {
       const resultChar = await axios(
-        `https://rick-and-morty-jeromanp.vercel.app/rickandmorty/character/${id}`
+        `${backend}/rickandmorty/character/${id}`
       );
       let char = resultChar.data;
       if (char.name) {
