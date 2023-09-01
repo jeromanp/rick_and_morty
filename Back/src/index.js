@@ -1,9 +1,7 @@
-const express = require("express");
-const app = express();
+const app = require("./app");
 
-// This line is important to ensure your app listens to the PORT env var
-const port = process.env.PORT ?? 8080;
+const PORT = 3001 || process.env.PORT;
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log("server in http://localhost:3001");
 });

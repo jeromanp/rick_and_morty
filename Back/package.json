@@ -1,13 +1,13 @@
 {
   "name": "back_end",
   "version": "1.0.0",
-  "main": "./src/index.js",
   "description": "Back to Rick and Morty",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start":  "npm run lint && node ./src/index.js",
+    "start":  "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
