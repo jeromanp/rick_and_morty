@@ -42,7 +42,7 @@ export default function App() {
   async function onSearch(id) {
     try {
       const resultChar = await axios(
-        `http://localhost:3001/rickandmorty/character/${id}`
+        `https://rick-and-morty-jeromanp.vercel.app/rickandmorty/character/${id}`
       );
       let char = resultChar.data;
       if (char.name) {

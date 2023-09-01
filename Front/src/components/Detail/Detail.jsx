@@ -16,7 +16,7 @@ export default function Detail() {
 
   useEffect(() => {
     //https://rickandmortyapi.com/api/character/${detailId}
-    fetch(`http://localhost:3001/rickandmorty/character/${detailId}`)
+    fetch(`https://rick-and-morty-jeromanp.vercel.app/rickandmorty/character/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.name) {
