@@ -1,7 +1,7 @@
 const app = require("./app");
 
-const PORT = 3001 || process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-  console.log("server in http://localhost:3001");
+  console.log(`Example app listening on port ${PORT}!`);
 });
