@@ -45,3 +45,33 @@
   font-size: 10px;
   color: rgb(255, 0, 0);
 }
+
+
+.anuncio{
+  display: inline;
+  position: absolute;
+  top: 40%;
+  left: 20%;  
+  color: aliceblue;
+  background-color: rgb(15, 12, 207);
+  border-radius: 20%;
+  padding: 1%;
+  animation: pulsating 2s infinite;
+}
+
+@keyframes pulsating {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1); /* Escala el div al 110% */
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+

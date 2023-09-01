@@ -35,6 +35,11 @@ export default function Form(props) {
 
   return (
     <div>
+      <div className={style.anuncio}>
+        <span>Ingrese con estas credenciales</span>
+        <p>username = <b>jeroman@email.com</b></p>
+        <p>password = <b>1password</b></p>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className={style.container}>
           <h1 className={style.h2}>Login</h1>
