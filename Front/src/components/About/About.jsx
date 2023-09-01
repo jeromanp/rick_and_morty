@@ -21,14 +21,14 @@ export default function About() {
         <h2 className={styles.h2}>¿Porqué se implementó este proyecto</h2>
 
         <p className={styles.p}>
-          Rick and Morty es un proyecto desarrollado con React, Redux, y Express 
+          Rick and Morty es mi <b className={{color:"red"}}>primer proyecto</b> desarrollado con React, Redux, y Express 
           como componentes principales, con el objetivo de poder interactuar y
           mejorar conocimientos y habilidades obtenidos durante el curso del
-          Bootcamp de Henry en su Módulo 2 y 3 dedicado a la parte del FrontEnd y Backend
+          Bootcamp de Henry en su Módulo 2 y 3 dedicado a la parte del FrontEnd y Backend. 
         </p>
 
         <p className={styles.p}>
-          Este proyecto cuenta con muchas horas de trabajo, como para hacer el código, leer documentación y hasta resolver bugs. El propósito de este Proyecto es poder implementar parte del conocimiento del Bootcamp así como de perfeccionar nuestra técnica de autoaprendizaje, pero sobretodo poder ver reflejado una parte de nuestra creatividad y personalización en un Proyecto que poco a poco se fue desarrollando durante el curso del Bootcamp.
+          Este proyecto cuenta con varias horas de trabajo, como para hacer el código, leer documentación y resolver bugs. El propósito de este Proyecto es poder implementar parte del conocimiento del Bootcamp así como de perfeccionar nuestra técnica de autoaprendizaje, pero sobretodo poder ver reflejado una parte de nuestra creatividad y personalización en un Proyecto que poco a poco se fue desarrollando durante el curso del Bootcamp. Batallo mucho con los estilos CSS, pero en un primer proyecto, me agrado la vista. Por el momento solo esta disponible para pantallas grandes.
         </p>
 
    
