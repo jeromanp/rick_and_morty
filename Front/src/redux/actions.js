@@ -2,10 +2,12 @@ import { ADD_FAV, DELETE_FAV, FILTER, ORDER, RESET } from "./types";
 import axios from "axios"
 
 export function addFavorite(char) {
+  const backend = "https://rym.onrender.com"
+
   return async function (dispatch) {
     try {
       const addCharFav = await axios.post(
-        `http://localhost:3001/rickandmorty/fav`,
+        `${backend}/rickandmorty/fav`,
         char
       );
       dispatch({
@@ -19,10 +21,12 @@ export function addFavorite(char) {
 }
 
 export function deleteFavorite(id) {
+  const backend = "https://rym.onrender.com"
+
   return async function (dispatch) {
     try {
       //eslint-disable-next-line
-      const deleteFav = await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`
+      const deleteFav = await axios.delete(`${backend}/rickandmorty/fav/${id}`
       );
       dispatch({
         type: DELETE_FAV,
