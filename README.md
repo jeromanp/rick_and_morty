@@ -16,6 +16,9 @@
   Entrar con estas credenciales: <br>
   Username: jeroman@gmail.com,<br>
   Password: 1password</p>
+
+  <br><br>
+  Solo se puede usar en dispositivos mayores a 1024px
   
   
 </div>
