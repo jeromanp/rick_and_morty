@@ -6,12 +6,14 @@ import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites.jsx";
+import Loader from "./components/Loader/Loader.jsx"
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
+  const [loading, setLoading] = useState(false)
   const username = "jeroman@email.com";
   const password = "1password";
   const backend = "https://rym.onrender.com"
@@ -43,6 +45,7 @@ export default function App() {
 
   async function onSearch(id) {
     try {
+      setLoading(true)
       const resultChar = await axios(`${backend}/rickandmorty/character/${id}`);
       let char = resultChar.data;
       if (char.name) {
@@ -59,6 +62,8 @@ export default function App() {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -94,6 +99,8 @@ export default function App() {
           <Nav onSearch={onSearch} logout={logout} />
         )}
       </span>
+
+      {loading && <Loader />}
 
       <Routes>
         <Route path="/" element=<Form login={login} /> />
