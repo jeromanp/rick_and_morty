@@ -3,6 +3,8 @@ import axios from "axios"
 
 export function addFavorite(char) {
   const backend = "https://rym.onrender.com"
+  // const backend = `http://localhost:3001`
+
 
   return async function (dispatch) {
     try {
@@ -22,6 +24,8 @@ export function addFavorite(char) {
 
 export function deleteFavorite(id) {
   const backend = "https://rym.onrender.com"
+  // const backend = `http://localhost:3001`
+
 
   return async function (dispatch) {
     try {

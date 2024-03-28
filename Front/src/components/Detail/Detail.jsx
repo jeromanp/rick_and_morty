@@ -8,6 +8,7 @@ export default function Detail() {
   const [character, setCharacter] = useState({});
   console.log(detailId);
   const backend = "https://rym.onrender.com"
+  // const backend = `http://localhost:3001`
 
   const navigate = useNavigate();
   function backToHome() {
