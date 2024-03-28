@@ -1,3 +1,14 @@
+.container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  color: #ffff;
+  font-size:xx-large;
+}
+
 .wrapper {
     width: 200px;
     height: 60px;
