@@ -15,6 +15,7 @@ export default function App() {
   const username = "jeroman@email.com";
   const password = "1password";
   const backend = "https://rym.onrender.com"
+  // const backend = `http://localhost:3001`;
 
   const login = (userData) => {
     if (password === userData.password && username === userData.username) {
@@ -42,9 +43,7 @@ export default function App() {
 
   async function onSearch(id) {
     try {
-      const resultChar = await axios(
-        `${backend}/rickandmorty/character/${id}`
-      );
+      const resultChar = await axios(`${backend}/rickandmorty/character/${id}`);
       let char = resultChar.data;
       if (char.name) {
         //para no repetir personajes
@@ -64,10 +63,15 @@ export default function App() {
   }
 
   function onClose(id) {
-    setCharacters((dato) => {
-      return dato.filter((event) => event.id !== id);
-    });
-    alert(`Se elimino el ID ${id}`);
+    // setCharacters((dato) => {
+    //   return dato.filter((event) => event.id !== id);
+    // });
+    // alert(`Se elimino el ID ${id}`);
+    if (window.confirm(`Desea eliminar el ${id}`) === true) {
+      setCharacters((dato) => {
+        return dato.filter((event) => event.id !== id);
+      });
+    }
   }
 
   if (location.pathname === "/about") {
